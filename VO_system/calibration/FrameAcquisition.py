@@ -18,8 +18,8 @@ os.makedirs(left_dir, exist_ok=True)
 os.makedirs(right_dir, exist_ok=True)
 
 # Define the camera device IDs
-left_camera = "0"  # Modify based on your camera setup
-right_camera = "1" # Modify based on your camera setup
+left_camera = "0"  
+right_camera = "1" 
 
 def capture_image(camera, filename):
     """
@@ -33,7 +33,6 @@ def capture_image(camera, filename):
 	"-t", "10000",
 	"--width", "1920",
 	"--height", "1080"
-          # 1ms exposure time just to capture immediately
     ]
     try:
         subprocess.run(command, check=True)
